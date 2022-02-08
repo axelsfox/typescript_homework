@@ -1,6 +1,6 @@
 import { renderBlock } from './lib.js'
 
-export function renderSearchStubBlock () {
+export function renderSearchStubBlock() {
   renderBlock(
     'search-results-block',
     `
@@ -12,7 +12,7 @@ export function renderSearchStubBlock () {
   )
 }
 
-export function renderEmptyOrErrorSearchBlock (reasonMessage) {
+export function renderEmptyOrErrorSearchBlock(reasonMessage) {
   renderBlock(
     'search-results-block',
     `
@@ -24,14 +24,14 @@ export function renderEmptyOrErrorSearchBlock (reasonMessage) {
   )
 }
 
-export function renderSearchResultsBlock () {
+export function renderSearchResultsBlock() {
   renderBlock(
     'search-results-block',
     `
     <div class="search-results-header">
         <p>Результаты поиска</p>
         <div class="search-results-filter">
-            <span><i class="icon icon-filter"></i> Сортировать:</span>
+            <span><i class="icon icon-filter"></i> Сортирвать:</span>
             <select>
                 <option selected="">Сначала дешёвые</option>
                 <option selected="">Сначала дорогие</option>
