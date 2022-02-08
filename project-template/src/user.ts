@@ -8,7 +8,7 @@ export function renderUserBlock(name: string, img: string, favoriteItemsAmount: 
     'user-block',
     `
     <div class="header-container">
-      <img class="avatar" src="${img}" alt="User img" />
+      <img class="avatar" src="${img}" alt="User_img" />
       <div class="info">
           <p class="name">${name}</p>
           <p class="fav">
