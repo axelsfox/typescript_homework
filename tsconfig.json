@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "./project-template/public/scripts",
+    "target": "es2015",
+    "module": "es2015",
+    "moduleResolution": "node"
+  },
+  "files": [
+    "project-template/src/index.ts"
+  ]
+}
