@@ -20,7 +20,7 @@ export function renderSearchResultsBlock() {
     <div class="search-results-header">
         <p>Результаты поиска</p>
         <div class="search-results-filter">
-            <span><i class="icon icon-filter"></i> Сортировать:</span>
+            <span><i class="icon icon-filter"></i> Сортирвать:</span>
             <select>
                 <option selected="">Сначала дешёвые</option>
                 <option selected="">Сначала дорогие</option>
