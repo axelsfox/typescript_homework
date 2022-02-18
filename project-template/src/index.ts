@@ -7,7 +7,6 @@ import { User, getUserData, getFavoritesAmount } from './user-info.js'
 window.addEventListener('DOMContentLoaded', () => {
   const user: User = getUserData();
   console.log(user);
-
   renderUserBlock(user.userName, user.userUrl, getFavoritesAmount())
   renderSearchFormBlock()
   renderSearchStubBlock()

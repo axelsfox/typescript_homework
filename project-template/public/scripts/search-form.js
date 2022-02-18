@@ -1,5 +1,6 @@
 import { renderBlock } from './lib.js';
 import { endDayOfMonth, defaultDay, formatDate } from './date.js';
+import { userFormData } from './seach-interfaces.js';
 /**
  * @param dateStart {Date} - дата прибытия в отель
  * @param dateOff {Date} - дата отбытия в отель
@@ -13,6 +14,17 @@ export function renderSearchFormBlock(dateStart, dateOff) {
     const endValue = formatDate(dateOff || defaultDay(dateStart, 2));
     const now = formatDate(new Date());
     const lastDayofMonth = formatDate(endDayOfMonth(new Date()));
+    function handleSearch(event, array) {
+        event.preventDefault();
+        if (event.target) {
+            const formData = new FormData(event.target);
+            const formDataDf = {};
+            array.forEach(key => {
+                formDataDf[key] = formData.get(key);
+            });
+            userFormData(formDataDf);
+        }
+    }
     renderBlock('search-form-block', `
     <form>
       <fieldset class="search-filedset">
@@ -47,4 +59,9 @@ export function renderSearchFormBlock(dateStart, dateOff) {
       </fieldset>
     </form>
     `);
+    const form = document.getElementById('form');
+    if (form) {
+        const arrayNames = ['checkin', 'checkout', 'price'];
+        form.addEventListener('submit', ev => handleSearch(ev, arrayNames));
+    }
 }
