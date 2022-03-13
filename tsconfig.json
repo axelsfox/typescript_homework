@@ -1,4 +1,5 @@
 {
+  "extends": "./tsconfig-checks.json",
   "compilerOptions": {
     "outDir": "./project-template/public/scripts",
     "target": "es2015",
