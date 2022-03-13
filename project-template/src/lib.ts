@@ -1,9 +1,11 @@
-export function renderBlock(elementId, html) {
-  const element = document.getElementById(elementId)
-  element.innerHTML = html
+export function renderBlock(elementId: string, html: string) {
+  const element: HTMLElement | null = document.getElementById(elementId);
+  if (element != null) {
+    element.innerHTML = html
+  }
 }
 
-export function renderToast(message, action) {
+export function renderToast(message: { text: string, type: string } | null, action: { name: string, handler: Function } | null) {
   let messageText = ''
 
   if (message != null) {
@@ -26,7 +28,7 @@ export function renderToast(message, action) {
       if (action != null && action.handler != null) {
         action.handler()
       }
-      renderToast(null)
+      renderToast(null, null)
     }
   }
 }
